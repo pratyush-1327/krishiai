@@ -55,11 +55,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   BottomNavigationBarItem(
                     icon: Icon(CupertinoIcons.chat_bubble_2),
                     // icon: Icon(CupertinoIcons.timelapse),
-                    label: 'Chat History',
+                    label: 'Chat ',
                   ),
                   BottomNavigationBarItem(
                     icon: Icon(Icons.history),
-                    label: 'Chat',
+                    label: 'Chat History',
                   ),
                   BottomNavigationBarItem(
                     icon: Icon(CupertinoIcons.person),

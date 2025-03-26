@@ -9,7 +9,7 @@ class Insurance extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
         // centerTitle: true,
-        title: const Text('Mutual Funds'),
+        title: const Text('Insurance'),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -43,12 +43,12 @@ class Insurance extends StatelessWidget {
                     spacing: 20,
                     children: [
                       Text(
-                        'Mutual Funds-Sahi Hai !',
+                        'Insurance: "Protect Life, Stay Secure!"',
                         style: TextStyle(
                             fontSize: 33, fontWeight: FontWeight.w400),
                       ),
                       Text(
-                        'Mutual funds allow you to invest in stocks, bonds, or other assets without needing deep market knowledge. Managed by experts, they offer diversification, reducing risks. You can start with as little as ₹500 through SIP (Systematic Investment Plan). There are different types—equity for high returns, debt for stability, and hybrid for balance. Ideal for long-term wealth creation, mutual funds help achieve financial goals like buying a home or retirement.',
+                        'Insurance is essential for financial security. Life insurance ensures your family’s well-being in your absence, while health insurance covers rising medical costs. Term plans provide high coverage at low premiums, and ULIPs offer investment benefits. In India, having adequate coverage helps during emergencies, reducing financial burdens on families.',
                         style: TextStyle(fontSize: 20),
                       )
                     ],

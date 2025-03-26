@@ -9,7 +9,7 @@ class Stocks extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
         // centerTitle: true,
-        title: const Text('Mutual Funds'),
+        title: const Text('Stocks'),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -24,7 +24,7 @@ class Stocks extends StatelessWidget {
                     image: DecorationImage(
                         fit: BoxFit.cover,
                         image: NetworkImage(
-                          'https://i.pinimg.com/736x/78/63/c1/7863c1de016b2cecfbff4985ef321cfe.jpg',
+                          'https://i.pinimg.com/736x/79/68/74/7968740973b0b6dd1b4668fdae827ad7.jpg',
                         ))),
 
                 height: 300,
@@ -43,12 +43,12 @@ class Stocks extends StatelessWidget {
                     spacing: 20,
                     children: [
                       Text(
-                        'Mutual Funds-Sahi Hai !',
+                        'Stocks: "Own Stocks, Build Wealth!"',
                         style: TextStyle(
                             fontSize: 33, fontWeight: FontWeight.w400),
                       ),
                       Text(
-                        'Mutual funds allow you to invest in stocks, bonds, or other assets without needing deep market knowledge. Managed by experts, they offer diversification, reducing risks. You can start with as little as ₹500 through SIP (Systematic Investment Plan). There are different types—equity for high returns, debt for stability, and hybrid for balance. Ideal for long-term wealth creation, mutual funds help achieve financial goals like buying a home or retirement.',
+                        'Buying stocks means owning a part of a company. Stocks can offer high returns, but they also come with risks. India’s stock market, led by Sensex and Nifty, has helped many create wealth. Long-term investors benefit from compounding and economic growth. Investing in blue-chip stocks or sectors like IT, banking, and FMCG can yield good returns.',
                         style: TextStyle(fontSize: 20),
                       )
                     ],

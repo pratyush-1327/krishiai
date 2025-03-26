@@ -9,7 +9,7 @@ class Tax extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
         // centerTitle: true,
-        title: const Text('Mutual Funds'),
+        title: const Text('Tax Saving'),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -24,7 +24,7 @@ class Tax extends StatelessWidget {
                     image: DecorationImage(
                         fit: BoxFit.cover,
                         image: NetworkImage(
-                          'https://i.pinimg.com/736x/78/63/c1/7863c1de016b2cecfbff4985ef321cfe.jpg',
+                          'https://i.pinimg.com/736x/f3/aa/ac/f3aaac4ec2c1b28d0985603a7268c626.jpg',
                         ))),
 
                 height: 300,
@@ -43,12 +43,12 @@ class Tax extends StatelessWidget {
                     spacing: 20,
                     children: [
                       Text(
-                        'Mutual Funds-Sahi Hai !',
+                        'Tax Saving: "Save Tax, Grow Money!"',
                         style: TextStyle(
                             fontSize: 33, fontWeight: FontWeight.w400),
                       ),
                       Text(
-                        'Mutual funds allow you to invest in stocks, bonds, or other assets without needing deep market knowledge. Managed by experts, they offer diversification, reducing risks. You can start with as little as ₹500 through SIP (Systematic Investment Plan). There are different types—equity for high returns, debt for stability, and hybrid for balance. Ideal for long-term wealth creation, mutual funds help achieve financial goals like buying a home or retirement.',
+                        'Indians can save taxes under Section 80C by investing in PPF, ELSS, NPS, and tax-saving FDs. Health insurance premiums (Section 80D) and home loan interest (Section 24) also offer deductions. Strategic tax planning helps you save money while investing wisely. Start early to maximize benefits and build long-term wealth.',
                         style: TextStyle(fontSize: 20),
                       )
                     ],

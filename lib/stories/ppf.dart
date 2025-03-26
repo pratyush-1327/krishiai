@@ -9,7 +9,7 @@ class Ppf extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
         // centerTitle: true,
-        title: const Text('Mutual Funds'),
+        title: const Text('PPF'),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -24,7 +24,7 @@ class Ppf extends StatelessWidget {
                     image: DecorationImage(
                         fit: BoxFit.cover,
                         image: NetworkImage(
-                          'https://i.pinimg.com/736x/78/63/c1/7863c1de016b2cecfbff4985ef321cfe.jpg',
+                          'https://i.pinimg.com/736x/57/5a/23/575a239f458f4c4e661db7a3e027542e.jpg',
                         ))),
 
                 height: 300,
@@ -43,12 +43,12 @@ class Ppf extends StatelessWidget {
                     spacing: 20,
                     children: [
                       Text(
-                        'Mutual Funds-Sahi Hai !',
+                        'PPF: "Secure Future with PPF!"',
                         style: TextStyle(
                             fontSize: 33, fontWeight: FontWeight.w400),
                       ),
                       Text(
-                        'Mutual funds allow you to invest in stocks, bonds, or other assets without needing deep market knowledge. Managed by experts, they offer diversification, reducing risks. You can start with as little as ₹500 through SIP (Systematic Investment Plan). There are different types—equity for high returns, debt for stability, and hybrid for balance. Ideal for long-term wealth creation, mutual funds help achieve financial goals like buying a home or retirement.',
+                        'Public Provident Fund (PPF) is a government-backed savings scheme with guaranteed returns. It has a 15-year lock-in, making it great for long-term wealth building. The interest is tax-free, and investments qualify for deductions under Section 80C. You can invest between ₹500 and ₹1.5 lakh per year. Ideal for risk-averse investors, PPF ensures financial security while offering compounding benefits.',
                         style: TextStyle(fontSize: 20),
                       )
                     ],
