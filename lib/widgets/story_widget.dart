@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:chatbotapp/screens/chat_screen.dart';
+import 'package:finai/screens/chat_screen.dart';
 
 import 'package:flutter/material.dart';
-import 'package:chatbotapp/screens/chat_screen.dart';
+import 'package:finai/screens/chat_screen.dart';
 
 class CategoriesCardWidget extends StatelessWidget {
   final String image;

@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:chatbotapp/models/message.dart';
-import 'package:chatbotapp/widgets/preview_images_widget.dart';
+import 'package:finai/models/message.dart';
+import 'package:finai/widgets/preview_images_widget.dart';
 
 /// A widget that displays a message from the assistant.
-/// 
+///
 /// This widget renders the assistant's message with appropriate styling,
 /// including any attached images. It also shows a loading animation
 /// when the message is empty (during typing).
 class AssistantMessageWidget extends StatelessWidget {
   /// Creates an assistant message widget.
-  /// 
+  ///
   /// The [message] parameter contains the message content and any images to display.
   const AssistantMessageWidget({
     super.key,

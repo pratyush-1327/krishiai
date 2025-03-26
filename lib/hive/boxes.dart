@@ -1,7 +1,7 @@
-import 'package:chatbotapp/constants/constants.dart';
-import 'package:chatbotapp/hive/chat_history.dart';
-import 'package:chatbotapp/hive/settings.dart';
-import 'package:chatbotapp/hive/user_model.dart';
+import 'package:finai/constants/constants.dart';
+import 'package:finai/hive/chat_history.dart';
+import 'package:finai/hive/settings.dart';
+import 'package:finai/hive/user_model.dart';
 import 'package:hive/hive.dart';
 
 class Boxes {

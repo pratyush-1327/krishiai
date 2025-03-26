@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:chatbotapp/models/message.dart';
-import 'package:chatbotapp/widgets/preview_images_widget.dart';
+import 'package:finai/models/message.dart';
+import 'package:finai/widgets/preview_images_widget.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 
 class MyMessageWidget extends StatelessWidget {

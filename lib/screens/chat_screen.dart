@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:chatbotapp/providers/chat_provider.dart';
-import 'package:chatbotapp/utility/animated_dialog.dart';
-import 'package:chatbotapp/widgets/bottom_chat_field.dart';
-import 'package:chatbotapp/widgets/chat_messages.dart';
+import 'package:finai/providers/chat_provider.dart';
+import 'package:finai/utility/animated_dialog.dart';
+import 'package:finai/widgets/bottom_chat_field.dart';
+import 'package:finai/widgets/chat_messages.dart';
 import 'package:provider/provider.dart';
 
 class ChatScreen extends StatefulWidget {

@@ -1,11 +1,11 @@
-import 'package:chatbotapp/stories/insurance.dart';
-import 'package:chatbotapp/stories/mutualfund.dart';
-import 'package:chatbotapp/stories/ppf.dart';
-import 'package:chatbotapp/stories/stocks.dart';
-import 'package:chatbotapp/stories/tax.dart';
-import 'package:chatbotapp/widgets/story_widget.dart';
+import 'package:finai/stories/insurance.dart';
+import 'package:finai/stories/mutualfund.dart';
+import 'package:finai/stories/ppf.dart';
+import 'package:finai/stories/stocks.dart';
+import 'package:finai/stories/tax.dart';
+import 'package:finai/widgets/story_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:chatbotapp/screens/chat_screen.dart';
+import 'package:finai/screens/chat_screen.dart';
 
 class StoryScreen extends StatelessWidget {
   const StoryScreen({super.key});

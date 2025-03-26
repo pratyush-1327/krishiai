@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:chatbotapp/providers/chat_provider.dart';
+import 'package:finai/providers/chat_provider.dart';
 import 'package:provider/provider.dart';
 
 class EmptyHistoryWidget extends StatelessWidget {

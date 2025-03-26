@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:chatbotapp/models/message.dart';
-import 'package:chatbotapp/providers/chat_provider.dart';
-import 'package:chatbotapp/widgets/assistant_message_widget.dart';
-import 'package:chatbotapp/widgets/my_message_widget.dart';
+import 'package:finai/models/message.dart';
+import 'package:finai/providers/chat_provider.dart';
+import 'package:finai/widgets/assistant_message_widget.dart';
+import 'package:finai/widgets/my_message_widget.dart';
 
 /// A widget that displays a conversation between the user and the assistant.
 ///

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:chatbotapp/themes/my_theme.dart';
-import 'package:chatbotapp/providers/chat_provider.dart';
-import 'package:chatbotapp/providers/settings_provider.dart';
-import 'package:chatbotapp/screens/home_screen.dart';
+import 'package:finai/themes/my_theme.dart';
+import 'package:finai/providers/chat_provider.dart';
+import 'package:finai/providers/settings_provider.dart';
+import 'package:finai/screens/home_screen.dart';
 import 'package:provider/provider.dart';
 
 import 'package:flutter_dotenv/flutter_dotenv.dart';

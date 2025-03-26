@@ -2,9 +2,9 @@ import 'dart:developer';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:chatbotapp/providers/chat_provider.dart';
-import 'package:chatbotapp/utility/animated_dialog.dart';
-import 'package:chatbotapp/widgets/preview_images_widget.dart';
+import 'package:finai/providers/chat_provider.dart';
+import 'package:finai/utility/animated_dialog.dart';
+import 'package:finai/widgets/preview_images_widget.dart';
 import 'package:image_picker/image_picker.dart';
 
 class BottomChatField extends StatefulWidget {

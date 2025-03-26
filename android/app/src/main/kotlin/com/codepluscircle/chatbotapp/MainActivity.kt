@@ -1,4 +1,4 @@
-package com.codepluscircle.chatbotapp
+package com.flutter.finai
 
 import io.flutter.embedding.android.FlutterActivity
 
