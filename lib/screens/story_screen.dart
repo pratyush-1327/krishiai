@@ -76,13 +76,14 @@ class StoryScreen extends StatelessWidget {
                 fontWeight: FontWeight.w400,
               ),
             ),
-            SingleChildScrollView(
-              child: SizedBox(
-                height: 505, // Set a height for the grid
+            Expanded(
+              child: SingleChildScrollView(
                 child: GridView.count(
                   crossAxisCount: 2,
                   crossAxisSpacing: 16,
                   mainAxisSpacing: 16,
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
                   children: [
                     CategoriesCardWidget(
                         image:
