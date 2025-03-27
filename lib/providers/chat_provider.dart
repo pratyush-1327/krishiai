@@ -35,7 +35,7 @@ class ChatProvider extends ChangeNotifier {
   int _currentIndex = 0;
 
   // Model instances
-  late final GenerativeModel _model;
+  GenerativeModel? _model;
   late final GenerativeModel _textModel;
   late final GenerativeModel _visionModel;
 
@@ -110,8 +110,10 @@ class ChatProvider extends ChangeNotifier {
 
   /// Configures the model based on whether the chat is text-only.
   Future<void> setModel({required bool isTextOnly}) async {
-    _model = isTextOnly ? _textModel : _visionModel;
-    notifyListeners();
+    if (_model == null) {
+      _model = isTextOnly ? _textModel : _visionModel;
+      notifyListeners();
+    }
   }
 
   /// Deletes chat messages for a specified chat ID.
@@ -197,7 +199,11 @@ class ChatProvider extends ChangeNotifier {
     required String modelMessageId,
     required Box messagesBox,
   }) async {
-    final chatSession = _model.startChat(
+    if (_model == null) {
+      log('Model is null, cannot start chat session');
+      return;
+    }
+    final chatSession = _model!.startChat(
       history: history.isEmpty || !isTextOnly ? null : history,
     );
 
@@ -216,7 +222,7 @@ class ChatProvider extends ChangeNotifier {
     _inChatMessages.add(assistantMessage);
     notifyListeners();
 
-    chatSession.sendMessageStream(content).asyncMap((event) => event).listen(
+    chatSession.sendMessageStream(content).listen(
       (event) {
         _inChatMessages
             .firstWhere((element) =>
@@ -236,11 +242,14 @@ class ChatProvider extends ChangeNotifier {
           messagesBox: messagesBox,
         );
         setLoading(value: false);
+        notifyListeners(); // Ensure listeners are notified after loading is set to false
       },
-    ).onError((error, stackTrace) {
-      log('error: $error');
-      setLoading(value: false);
-    });
+      onError: (error, stackTrace) {
+        log('error: $error');
+        setLoading(value: false);
+        notifyListeners(); // Ensure listeners are notified after loading is set to false
+      },
+    );
   }
 
   /// Saves messages to the database.
