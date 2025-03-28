@@ -1,5 +1,3 @@
-import 'dart:developer';
-import 'dart:typed_data';
 import 'package:finai/apis/api_service.dart';
 import 'package:finai/constants/constants.dart';
 import 'package:finai/hive/boxes.dart';
@@ -10,7 +8,6 @@ import 'package:finai/models/message.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
-import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart' as path;
@@ -200,7 +197,7 @@ class ChatProvider extends ChangeNotifier {
     required Box messagesBox,
   }) async {
     if (_model == null) {
-      log('Model is null, cannot start chat session');
+      print('Model is null, cannot start chat session');
       return;
     }
     final chatSession = _model!.startChat(
@@ -230,11 +227,11 @@ class ChatProvider extends ChangeNotifier {
                 element.role.name == Role.assistant.name)
             .message
             .write(event.text);
-        log('event: ${event.text}');
+        print('event: ${event.text}');
         notifyListeners();
       },
       onDone: () async {
-        log('stream done');
+        print('stream done');
         await saveMessagesToDB(
           chatID: chatId,
           userMessage: userMessage,
@@ -245,7 +242,7 @@ class ChatProvider extends ChangeNotifier {
         notifyListeners(); // Ensure listeners are notified after loading is set to false
       },
       onError: (error, stackTrace) {
-        log('error: $error');
+        print('error: $error');
         setLoading(value: false);
         notifyListeners(); // Ensure listeners are notified after loading is set to false
       },

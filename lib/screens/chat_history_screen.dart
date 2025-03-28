@@ -28,16 +28,28 @@ class _ChatHistoryScreenState extends State<ChatHistoryScreen> {
               box.values.toList().cast<ChatHistory>().reversed.toList();
           return chatHistory.isEmpty
               ? const EmptyHistoryWidget()
-              : Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: ListView.builder(
-                    itemCount: chatHistory.length,
-                    itemBuilder: (context, index) {
-                      final chat = chatHistory[index];
-                      return ChatHistoryWidget(chat: chat);
-                    },
+              : Stack(children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ListView.builder(
+                      itemCount: chatHistory.length,
+                      itemBuilder: (context, index) {
+                        final chat = chatHistory[index];
+                        return ChatHistoryWidget(chat: chat);
+                      },
+                    ),
                   ),
-                );
+                  Positioned(
+                    right: -20,
+                    bottom: 0,
+                    child: Container(
+                        height: 200,
+                        child: Image.asset(
+                          'assets/images/icons8-rupee-100.png',
+                          fit: BoxFit.fill,
+                        )),
+                  )
+                ]);
         },
       ),
     );

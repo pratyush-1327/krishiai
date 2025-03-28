@@ -40,13 +40,21 @@ class StoryScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      'FinAI 🗲',
-                      textAlign: TextAlign.left,
-                      style: TextStyle(
-                        fontSize: 35,
-                        fontWeight: FontWeight.bold,
-                      ),
+                    Row(
+                      children: [
+                        Text(
+                          'FinAI ',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            fontSize: 35,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Icon(
+                          Icons.bolt,
+                          size: 40,
+                        )
+                      ],
                     ),
                     Text(
                       'Next gen AI integrated financial advisor to save your money',

@@ -1,9 +1,11 @@
 import 'dart:developer';
+import 'dart:math';
 
+import 'package:finai/utility/animated_dialog.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:finai/providers/chat_provider.dart';
-import 'package:finai/utility/animated_dialog.dart';
+// import 'package:finai/utility/animated_dialog.dart';
 import 'package:finai/widgets/preview_images_widget.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -47,7 +49,7 @@ class _BottomChatFieldState extends State<BottomChatField> {
         isTextOnly: isTextOnly,
       );
     } catch (e) {
-      log('error : $e');
+      print('error : $e');
     } finally {
       textController.clear();
       widget.chatProvider.setImagesFileList(listValue: []);
@@ -65,7 +67,7 @@ class _BottomChatFieldState extends State<BottomChatField> {
       );
       widget.chatProvider.setImagesFileList(listValue: pickedImages);
     } catch (e) {
-      log('error : $e');
+      print('error : $e');
     }
   }
 
@@ -74,14 +76,10 @@ class _BottomChatFieldState extends State<BottomChatField> {
     bool hasImages = widget.chatProvider.imagesFileList != null &&
         widget.chatProvider.imagesFileList!.isNotEmpty;
 
-    return Container(
-      decoration: BoxDecoration(
-        color: Theme.of(context).cardColor,
-        borderRadius: BorderRadius.circular(30),
-        border: Border.all(
-          color: Theme.of(context).textTheme.titleLarge!.color!,
-        ),
-      ),
+    return Material(
+      elevation: 5.0,
+      borderRadius: BorderRadius.circular(30),
+      color: Theme.of(context).colorScheme.surfaceContainerHighest,
       child: Column(
         children: [
           if (hasImages) const PreviewImagesWidget(),
@@ -90,30 +88,30 @@ class _BottomChatFieldState extends State<BottomChatField> {
               IconButton(
                 onPressed: () {
                   if (hasImages) {
-                    // show the delete dialog
+                    // show the delete diaprint
                     showMyAnimatedDialog(
-                        context: context,
-                        title: 'Delete Images',
-                        content: 'Are you sure you want to delete the images?',
-                        actionText: 'Delete',
-                        onActionPressed: (value) {
-                          if (value) {
-                            widget.chatProvider.setImagesFileList(
-                              listValue: [],
-                            );
-                          }
-                        });
+                      context: context,
+                      title: 'Delete Images',
+                      content: 'Are you sure you want to delete the images?',
+                      actionText: 'Delete',
+                      onActionPressed: (value) {
+                        if (value) {
+                          widget.chatProvider.setImagesFileList(
+                            listValue: [],
+                          );
+                        }
+                      },
+                    );
                   } else {
                     pickImage();
                   }
                 },
                 icon: Icon(
-                  hasImages ? CupertinoIcons.delete : CupertinoIcons.photo,
+                  hasImages ? Icons.delete : Icons.photo,
+                  color: Theme.of(context).colorScheme.primary,
                 ),
               ),
-              const SizedBox(
-                width: 5,
-              ),
+              const SizedBox(width: 5),
               Expanded(
                 child: TextField(
                   focusNode: textFieldFocus,
@@ -131,42 +129,46 @@ class _BottomChatFieldState extends State<BottomChatField> {
                             );
                           }
                         },
-                  decoration: InputDecoration.collapsed(
-                      hintText: 'Enter a prompt...',
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide.none,
-                        borderRadius: BorderRadius.circular(30),
-                      )),
+                  decoration: InputDecoration(
+                    hintText: 'Enter a prompt...',
+                    border: InputBorder.none,
+                    contentPadding: const EdgeInsets.symmetric(
+                      horizontal: 16,
+                      vertical: 12,
+                    ),
+                  ),
                 ),
               ),
-              GestureDetector(
-                onTap: widget.chatProvider.isLoading
-                    ? null
-                    : () {
-                        if (textController.text.isNotEmpty) {
-                          // send the message
-                          sendChatMessage(
-                            message: textController.text,
-                            chatProvider: widget.chatProvider,
-                            isTextOnly: hasImages ? false : true,
-                          );
-                        }
-                      },
-                child: Container(
-                    decoration: BoxDecoration(
-                      color: Theme.of(context).colorScheme.primary,
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: FilledButton(
+                  style: FilledButton.styleFrom(
+                    backgroundColor: Theme.of(context).colorScheme.primary,
+                    shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
-                    margin: const EdgeInsets.all(5.0),
-                    child: const Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Icon(
-                        // Icons.arrow_upward,
-                        CupertinoIcons.arrow_up,
-                        color: Colors.white,
-                      ),
-                    )),
-              )
+                    padding: const EdgeInsets.all(8.0),
+                    minimumSize: Size.zero, // Set this to zero
+                    tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                  ),
+                  onPressed: widget.chatProvider.isLoading
+                      ? null
+                      : () {
+                          if (textController.text.isNotEmpty) {
+                            // send the message
+                            sendChatMessage(
+                              message: textController.text,
+                              chatProvider: widget.chatProvider,
+                              isTextOnly: hasImages ? false : true,
+                            );
+                          }
+                        },
+                  child: const Icon(
+                    Icons.send,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
             ],
           ),
         ],
