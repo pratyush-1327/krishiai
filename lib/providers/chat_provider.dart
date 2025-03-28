@@ -6,6 +6,7 @@ import 'package:finai/hive/settings.dart';
 import 'package:finai/hive/user_model.dart';
 import 'package:finai/models/message.dart';
 import 'package:flutter/foundation.dart';
+import 'package:finai/constants/predefined_prompt.dart';
 import 'package:flutter/material.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -26,6 +27,7 @@ class ChatProvider extends ChangeNotifier {
 
   // Chat state
   String _currentChatId = '';
+  bool _isFirstMessage = true;
 
   // Image state
   List<XFile>? _imagesFileList = [];
@@ -153,7 +155,15 @@ class ChatProvider extends ChangeNotifier {
     await setModel(isTextOnly: isTextOnly);
     setLoading(value: true);
     final chatId = _currentChatId.isNotEmpty ? _currentChatId : getChatId();
-    final history = await getHistory(chatId: chatId);
+    List<Content> history = await getHistory(chatId: chatId);
+
+    // Send predefined prompt if it's the first message
+    if (_isFirstMessage) {
+      final promptContent = Content.text(predefinedPrompt);
+      history = [promptContent, ...history];
+      _isFirstMessage = false;
+    }
+
     final imagesUrls = getImagesUrls(isTextOnly: isTextOnly);
 
     final messagesBox =
