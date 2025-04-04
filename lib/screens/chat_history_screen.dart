@@ -40,12 +40,12 @@ class _ChatHistoryScreenState extends State<ChatHistoryScreen> {
                     ),
                   ),
                   Positioned(
-                    right: -20,
-                    bottom: 0,
+                    right: -190,
+                    bottom: -70,
                     child: Container(
-                        height: 200,
+                        height: 500,
                         child: Image.asset(
-                          'assets/images/icons8-rupee-100.png',
+                          'assets/images/splant.png',
                           fit: BoxFit.fill,
                         )),
                   )

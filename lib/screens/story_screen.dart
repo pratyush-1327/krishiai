@@ -43,7 +43,7 @@ class StoryScreen extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          'krishiai ',
+                          'AgriSense',
                           textAlign: TextAlign.left,
                           style: TextStyle(
                             fontSize: 35,
@@ -51,7 +51,7 @@ class StoryScreen extends StatelessWidget {
                           ),
                         ),
                         Icon(
-                          Icons.bolt,
+                          Icons.energy_savings_leaf,
                           size: 40,
                         )
                       ],
