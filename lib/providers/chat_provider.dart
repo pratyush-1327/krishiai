@@ -1,12 +1,12 @@
-import 'package:finai/apis/api_service.dart';
-import 'package:finai/constants/constants.dart';
-import 'package:finai/hive/boxes.dart';
-import 'package:finai/hive/chat_history.dart';
-import 'package:finai/hive/settings.dart';
-import 'package:finai/hive/user_model.dart';
-import 'package:finai/models/message.dart';
+import 'package:krishiai/apis/api_service.dart';
+import 'package:krishiai/constants/constants.dart';
+import 'package:krishiai/hive/boxes.dart';
+import 'package:krishiai/hive/chat_history.dart';
+import 'package:krishiai/hive/settings.dart';
+import 'package:krishiai/hive/user_model.dart';
+import 'package:krishiai/models/message.dart';
 import 'package:flutter/foundation.dart';
-import 'package:finai/constants/predefined_prompt.dart';
+import 'package:krishiai/constants/predefined_prompt.dart';
 import 'package:flutter/material.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -64,7 +64,6 @@ class ChatProvider extends ChangeNotifier {
   String get modelType => _modelType;
   PageController get pageController => _pageController;
 
-  /// Sets in-chat messages based on the provided chat ID.
   Future<void> setInChatMessages({required String chatId}) async {
     final messagesFromDB = await loadMessagesFromDB(chatId: chatId);
     for (var message in messagesFromDB) {
@@ -75,7 +74,6 @@ class ChatProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  /// Loads messages from the database for a given chat ID.
   Future<List<Message>> loadMessagesFromDB({required String chatId}) async {
     await Hive.openBox('${Constants.chatMessagesBox}$chatId');
     final messageBox = Hive.box('${Constants.chatMessagesBox}$chatId');

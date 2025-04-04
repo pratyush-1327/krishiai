@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:finai/themes/my_theme.dart';
-import 'package:finai/providers/chat_provider.dart';
-import 'package:finai/providers/settings_provider.dart';
-import 'package:finai/screens/home_screen.dart';
+import 'package:krishiai/themes/my_theme.dart';
+import 'package:krishiai/providers/chat_provider.dart';
+import 'package:krishiai/providers/settings_provider.dart';
+import 'package:krishiai/screens/home_screen.dart';
 import 'package:provider/provider.dart';
 
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -44,7 +44,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Chat Bot App',
+      title: 'Krishi AI',
       theme:
           context.watch<SettingsProvider>().isDarkMode ? darkTheme : lightTheme,
       debugShowCheckedModeBanner: false,

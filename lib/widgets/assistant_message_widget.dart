@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:finai/models/message.dart';
-import 'package:finai/widgets/preview_images_widget.dart';
+import 'package:krishiai/models/message.dart';
+import 'package:krishiai/widgets/preview_images_widget.dart';
 
 /// A widget that displays a message from the assistant.
 ///

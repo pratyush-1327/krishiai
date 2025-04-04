@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:finai/hive/boxes.dart';
-import 'package:finai/hive/chat_history.dart';
-import 'package:finai/widgets/chat_history_widget.dart';
-import 'package:finai/widgets/empty_history_widget.dart';
+import 'package:krishiai/hive/boxes.dart';
+import 'package:krishiai/hive/chat_history.dart';
+import 'package:krishiai/widgets/chat_history_widget.dart';
+import 'package:krishiai/widgets/empty_history_widget.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 class ChatHistoryScreen extends StatefulWidget {

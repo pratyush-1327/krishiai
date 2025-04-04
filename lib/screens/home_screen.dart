@@ -1,10 +1,10 @@
-import 'package:finai/screens/story_screen.dart';
+import 'package:krishiai/screens/story_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:finai/providers/chat_provider.dart';
-import 'package:finai/screens/chat_history_screen.dart';
-import 'package:finai/screens/chat_screen.dart';
-import 'package:finai/screens/profile_screen.dart';
+import 'package:krishiai/providers/chat_provider.dart';
+import 'package:krishiai/screens/chat_history_screen.dart';
+import 'package:krishiai/screens/chat_screen.dart';
+import 'package:krishiai/screens/profile_screen.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {

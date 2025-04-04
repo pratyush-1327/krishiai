@@ -1,4 +1,4 @@
-package com.flutter.finai
+package com.flutter.krishiai
 
 import io.flutter.embedding.android.FlutterActivity
 

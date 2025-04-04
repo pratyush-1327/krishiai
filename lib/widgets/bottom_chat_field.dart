@@ -1,12 +1,12 @@
 import 'dart:developer';
 import 'dart:math';
 
-import 'package:finai/utility/animated_dialog.dart';
+import 'package:krishiai/utility/animated_dialog.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:finai/providers/chat_provider.dart';
-// import 'package:finai/utility/animated_dialog.dart';
-import 'package:finai/widgets/preview_images_widget.dart';
+import 'package:krishiai/providers/chat_provider.dart';
+// import 'package:krishiai/utility/animated_dialog.dart';
+import 'package:krishiai/widgets/preview_images_widget.dart';
 import 'package:image_picker/image_picker.dart';
 
 class BottomChatField extends StatefulWidget {

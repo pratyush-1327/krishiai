@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:finai/hive/boxes.dart';
-import 'package:finai/hive/settings.dart';
+import 'package:krishiai/hive/boxes.dart';
+import 'package:krishiai/hive/settings.dart';
 
 class SettingsProvider extends ChangeNotifier {
   bool _isDarkMode = false;

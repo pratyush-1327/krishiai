@@ -1,11 +1,11 @@
-import 'package:finai/stories/insurance.dart';
-import 'package:finai/stories/mutualfund.dart';
-import 'package:finai/stories/ppf.dart';
-import 'package:finai/stories/stocks.dart';
-import 'package:finai/stories/tax.dart';
-import 'package:finai/widgets/story_widget.dart';
+import 'package:krishiai/stories/insurance.dart';
+import 'package:krishiai/stories/mutualfund.dart';
+import 'package:krishiai/stories/ppf.dart';
+import 'package:krishiai/stories/stocks.dart';
+import 'package:krishiai/stories/tax.dart';
+import 'package:krishiai/widgets/story_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:finai/screens/chat_screen.dart';
+import 'package:krishiai/screens/chat_screen.dart';
 
 class StoryScreen extends StatelessWidget {
   const StoryScreen({super.key});
@@ -17,7 +17,7 @@ class StoryScreen extends StatelessWidget {
       //   backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
       //   centerTitle: true,
       //   title: const Text(
-      //     'FinAi - AI Financial Advisor',
+      //     'krishiai - AI Financial Advisor',
       //     style: TextStyle(fontWeight: FontWeight.bold),
       //   ),
       // ),
@@ -43,7 +43,7 @@ class StoryScreen extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          'FinAI ',
+                          'krishiai ',
                           textAlign: TextAlign.left,
                           style: TextStyle(
                             fontSize: 35,

@@ -1,7 +1,7 @@
-import 'package:finai/constants/constants.dart';
-import 'package:finai/hive/chat_history.dart';
-import 'package:finai/hive/settings.dart';
-import 'package:finai/hive/user_model.dart';
+import 'package:krishiai/constants/constants.dart';
+import 'package:krishiai/hive/chat_history.dart';
+import 'package:krishiai/hive/settings.dart';
+import 'package:krishiai/hive/user_model.dart';
 import 'package:hive/hive.dart';
 
 class Boxes {

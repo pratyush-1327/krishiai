@@ -1,6 +1,6 @@
-# FinAi - AI Financial Advisor
+# krishiai - AI Financial Advisor
 
-FinAi is a Flutter application that serves as your personal AI financial advisor. It provides insightful short stories on various financial topics and an AI-powered chatbot to answer your financial questions.
+krishiai is a Flutter application that serves as your personal AI financial advisor. It provides insightful short stories on various financial topics and an AI-powered chatbot to answer your financial questions.
 
 ## Features
 
