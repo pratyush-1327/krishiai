@@ -56,7 +56,7 @@ class _ChatScreenState extends State<ChatScreen> {
             backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
             centerTitle: true,
             title: const Text(
-              'Chat with Gemini',
+              'Chat with AgriSense AI',
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             actions: [

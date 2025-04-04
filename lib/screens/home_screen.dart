@@ -35,39 +35,34 @@ class _HomeScreenState extends State<HomeScreen> {
               chatProvider.setCurrentIndex(newIndex: index);
             },
           ),
-          bottomNavigationBar: Consumer<ChatProvider>(
-            builder: (context, chatProvider, child) {
-              return BottomNavigationBar(
-                currentIndex: chatProvider.currentIndex,
-                elevation: 0,
-                selectedItemColor: Theme.of(context).colorScheme.primary,
-                unselectedItemColor: Theme.of(context).colorScheme.tertiary,
-                onTap: (index) {
-                  chatProvider.setCurrentIndex(newIndex: index);
-                  chatProvider.pageController.jumpToPage(index);
-                  setState(() {});
-                },
-                items: const [
-                  BottomNavigationBarItem(
-                    icon: Icon(CupertinoIcons.money_dollar),
-                    label: 'Stories',
-                  ),
-                  BottomNavigationBarItem(
-                    icon: Icon(CupertinoIcons.chat_bubble_2),
-                    // icon: Icon(CupertinoIcons.timelapse),
-                    label: 'Chat ',
-                  ),
-                  BottomNavigationBarItem(
-                    icon: Icon(Icons.history),
-                    label: 'Chat History',
-                  ),
-                  BottomNavigationBarItem(
-                    icon: Icon(CupertinoIcons.person),
-                    label: 'Profile',
-                  ),
-                ],
-              );
+          bottomNavigationBar: NavigationBar(
+            selectedIndex: chatProvider.currentIndex,
+            elevation: 0,
+            backgroundColor: Theme.of(context).canvasColor,
+            indicatorColor: Theme.of(context).colorScheme.primaryContainer,
+            onDestinationSelected: (index) {
+              chatProvider.setCurrentIndex(newIndex: index);
+              chatProvider.pageController.jumpToPage(index);
+              setState(() {});
             },
+            destinations: const [
+              NavigationDestination(
+                icon: Icon(CupertinoIcons.money_dollar),
+                label: 'Stories',
+              ),
+              NavigationDestination(
+                icon: Icon(CupertinoIcons.chat_bubble_2),
+                label: 'Chat',
+              ),
+              NavigationDestination(
+                icon: Icon(Icons.history),
+                label: 'Chat History',
+              ),
+              NavigationDestination(
+                icon: Icon(CupertinoIcons.person),
+                label: 'Profile',
+              ),
+            ],
           ),
         );
       },

@@ -9,7 +9,7 @@ class Mutualfund extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
         // centerTitle: true,
-        title: const Text('Mutual Funds'),
+        title: const Text('Fertilizer Application'),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -24,7 +24,7 @@ class Mutualfund extends StatelessWidget {
                     image: DecorationImage(
                         fit: BoxFit.cover,
                         image: NetworkImage(
-                          'https://i.pinimg.com/736x/3f/07/ec/3f07ec2d3d5558a83086f564b0c23f47.jpg',
+                          'https://i.pinimg.com/736x/47/a2/44/47a244fb7954c7075a55f1c14c4d0af5.jpg',
                         ))),
 
                 height: 300,
@@ -43,12 +43,12 @@ class Mutualfund extends StatelessWidget {
                     spacing: 20,
                     children: [
                       Text(
-                        'Mutual Funds-Sahi Hai !',
+                        ' Fertilizer Application: The Right Time, Right Amount',
                         style: TextStyle(
                             fontSize: 33, fontWeight: FontWeight.w400),
                       ),
                       Text(
-                        'Mutual funds allow you to invest in stocks, bonds, or other assets without needing deep market knowledge. Managed by experts, they offer diversification, reducing risks. You can start with as little as ₹500 through SIP (Systematic Investment Plan). There are different types—equity for high returns, debt for stability, and hybrid for balance. Ideal for long-term wealth creation, mutual funds help achieve financial goals like buying a home or retirement.',
+                        'Applying fertilizers at the correct time and in the right quantity is crucial for healthy crops and maximum yield. Nitrogen-based fertilizers, such as urea, should be applied in split doses rather than all at once. For example, in wheat farming, the first dose should be applied during sowing, while the second dose should be added at the tillering stage to support growth.\nTo prevent nutrient loss, always apply fertilizers early in the morning or late in the evening when temperatures are lower. This reduces evaporation and ensures better absorption.\n Additionally, avoid broadcasting fertilizers on dry soil—instead, apply them when the soil has some moisture to enhance nutrient uptake. By following these best practices, farmers can optimize fertilizer efficiency, reduce costs, and improve soil health over time.',
                         style: TextStyle(fontSize: 20),
                       )
                     ],

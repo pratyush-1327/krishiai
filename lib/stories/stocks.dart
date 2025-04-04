@@ -9,7 +9,7 @@ class Stocks extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
         // centerTitle: true,
-        title: const Text('Stocks'),
+        title: const Text('Organic Pest Control'),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -24,7 +24,7 @@ class Stocks extends StatelessWidget {
                     image: DecorationImage(
                         fit: BoxFit.cover,
                         image: NetworkImage(
-                          'https://i.pinimg.com/736x/79/68/74/7968740973b0b6dd1b4668fdae827ad7.jpg',
+                          'https://i.pinimg.com/736x/8d/5a/81/8d5a810550412343448b04a8a3d8514d.jpg',
                         ))),
 
                 height: 300,
@@ -43,12 +43,12 @@ class Stocks extends StatelessWidget {
                     spacing: 20,
                     children: [
                       Text(
-                        'Stocks: "Own Stocks, Build Wealth!"',
+                        'Organic Pest Control: Neem Spray for Aphids',
                         style: TextStyle(
                             fontSize: 33, fontWeight: FontWeight.w400),
                       ),
                       Text(
-                        'Buying stocks means owning a part of a company. Stocks can offer high returns, but they also come with risks. India’s stock market, led by Sensex and Nifty, has helped many create wealth. Long-term investors benefit from compounding and economic growth. Investing in blue-chip stocks or sectors like IT, banking, and FMCG can yield good returns.',
+                        'Aphids are common pests that attack vegetables and fruit plants, sucking sap from leaves and causing stunted growth. Instead of using chemical pesticides, which may harm beneficial insects, farmers can use a simple neem oil spray as an organic alternative.\nNeem oil works by disrupting aphid reproduction and feeding behavior. It also repels other harmful insects like whiteflies and mealybugs. Using neem spray regularly helps control infestations while keeping the farm eco-friendly.',
                         style: TextStyle(fontSize: 20),
                       )
                     ],

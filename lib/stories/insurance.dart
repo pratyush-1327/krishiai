@@ -9,7 +9,7 @@ class Insurance extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
         // centerTitle: true,
-        title: const Text('Insurance'),
+        title: const Text('Soil Health'),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -24,7 +24,7 @@ class Insurance extends StatelessWidget {
                     image: DecorationImage(
                         fit: BoxFit.cover,
                         image: NetworkImage(
-                          'https://i.pinimg.com/736x/78/63/c1/7863c1de016b2cecfbff4985ef321cfe.jpg',
+                          'https://i.pinimg.com/736x/bb/bb/dc/bbbbdcc3673e13a12be1ed13583e92b3.jpg',
                         ))),
 
                 height: 300,
@@ -43,12 +43,12 @@ class Insurance extends StatelessWidget {
                     spacing: 20,
                     children: [
                       Text(
-                        'Insurance: "Protect Life, Stay Secure!"',
+                        'Soil Health: The Power of Green Manure',
                         style: TextStyle(
                             fontSize: 33, fontWeight: FontWeight.w400),
                       ),
                       Text(
-                        'Insurance is essential for financial security. Life insurance ensures your family’s well-being in your absence, while health insurance covers rising medical costs. Term plans provide high coverage at low premiums, and ULIPs offer investment benefits. In India, having adequate coverage helps during emergencies, reducing financial burdens on families.',
+                        'Soil health is the foundation of sustainable farming. Over time, excessive use of chemical fertilizers depletes soil nutrients, making it hard and unproductive. One effective way to restore soil fertility is through green manure—planting leguminous crops like clover, cowpea, or dhaincha before the main crop season.\nTo use green manure, plant legumes in the off-season and allow them to grow for 6–8 weeks before plowing them back into the soil. Over time, this practice leads to healthier, more fertile farmland, reducing dependency on costly fertilizers and improving crop yields naturally.',
                         style: TextStyle(fontSize: 20),
                       )
                     ],

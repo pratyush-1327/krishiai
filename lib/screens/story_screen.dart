@@ -43,7 +43,7 @@ class StoryScreen extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          'AgriSense',
+                          'AgriSense ',
                           textAlign: TextAlign.left,
                           style: TextStyle(
                             fontSize: 35,
@@ -57,7 +57,7 @@ class StoryScreen extends StatelessWidget {
                       ],
                     ),
                     Text(
-                      'Next gen AI integrated financial advisor to save your money',
+                      'Next-gen AI-powered agricultural advisor to enhance your farming efficiency and sustainability.',
                       textAlign: TextAlign.left,
                       style: TextStyle(
                         fontSize: 25,
@@ -65,7 +65,7 @@ class StoryScreen extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      'Swipe to access your financial assistant →',
+                      'Swipe to access your agriculture assistant →',
                       textAlign: TextAlign.left,
                       style: TextStyle(
                         fontSize: 25,
@@ -77,7 +77,7 @@ class StoryScreen extends StatelessWidget {
               ),
             ),
             Text(
-              'Read about different ways to save up on taxes and have a strong retirement plan below ↓ ',
+              'Explore smart farming techniques to improve yields, reduce costs, and build a sustainable agricultural future below ↓ ',
               textAlign: TextAlign.left,
               style: TextStyle(
                 fontSize: 18,
@@ -95,38 +95,38 @@ class StoryScreen extends StatelessWidget {
                   children: [
                     CategoriesCardWidget(
                         image:
-                            'https://i.pinimg.com/736x/3f/07/ec/3f07ec2d3d5558a83086f564b0c23f47.jpg',
-                        title: 'Mutual Funds',
+                            'https://i.pinimg.com/736x/47/a2/44/47a244fb7954c7075a55f1c14c4d0af5.jpg',
+                        title: 'Fertilizer Application',
                         category: "",
                         destination: const Mutualfund()),
                     CategoriesCardWidget(
                         image:
-                            'https://i.pinimg.com/736x/79/68/74/7968740973b0b6dd1b4668fdae827ad7.jpg',
-                        title: 'Stocks',
+                            'https://i.pinimg.com/736x/8d/5a/81/8d5a810550412343448b04a8a3d8514d.jpg',
+                        title: 'Organic Pest Control',
                         category: "",
                         destination: const Stocks()),
                     CategoriesCardWidget(
                         image:
-                            'https://i.pinimg.com/736x/f3/aa/ac/f3aaac4ec2c1b28d0985603a7268c626.jpg',
-                        title: 'Tax Saving',
+                            'https://i.pinimg.com/736x/19/88/4f/19884f2d8458859e1e16ee8df537698d.jpg',
+                        title: 'Smart Irrigation',
                         category: "",
                         destination: const Tax()),
                     CategoriesCardWidget(
                         image:
-                            'https://i.pinimg.com/736x/78/63/c1/7863c1de016b2cecfbff4985ef321cfe.jpg',
-                        title: 'Insurance',
+                            'https://i.pinimg.com/736x/bb/bb/dc/bbbbdcc3673e13a12be1ed13583e92b3.jpg',
+                        title: 'Soil Health',
                         category: "",
                         destination: const Insurance()),
                     CategoriesCardWidget(
                         image:
-                            'https://i.pinimg.com/736x/57/5a/23/575a239f458f4c4e661db7a3e027542e.jpg',
-                        title: 'PPF',
+                            'https://i.pinimg.com/736x/bc/70/c7/bc70c75d189c386df8c4dfc60583cc93.jpg',
+                        title: 'Crop Rotation',
                         category: "",
                         destination: const Ppf()),
                     CategoriesCardWidget(
                         image:
                             'https://i.pinimg.com/736x/3d/40/e6/3d40e65295b74559cc150660a509cb4f.jpg',
-                        title: 'Finances',
+                        title: 'Sensors',
                         category: "",
                         destination: const ChatScreen()),
                   ],

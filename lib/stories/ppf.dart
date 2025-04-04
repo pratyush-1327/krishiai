@@ -9,7 +9,7 @@ class Ppf extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
         // centerTitle: true,
-        title: const Text('PPF'),
+        title: const Text('Crop Rotation'),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -24,7 +24,7 @@ class Ppf extends StatelessWidget {
                     image: DecorationImage(
                         fit: BoxFit.cover,
                         image: NetworkImage(
-                          'https://i.pinimg.com/736x/57/5a/23/575a239f458f4c4e661db7a3e027542e.jpg',
+                          'https://i.pinimg.com/736x/bc/70/c7/bc70c75d189c386df8c4dfc60583cc93.jpg',
                         ))),
 
                 height: 300,
@@ -43,12 +43,12 @@ class Ppf extends StatelessWidget {
                     spacing: 20,
                     children: [
                       Text(
-                        'PPF: "Secure Future with PPF!"',
+                        'Crop Rotation: A Simple Way to Prevent Soil Depletion',
                         style: TextStyle(
                             fontSize: 33, fontWeight: FontWeight.w400),
                       ),
                       Text(
-                        'Public Provident Fund (PPF) is a government-backed savings scheme with guaranteed returns. It has a 15-year lock-in, making it great for long-term wealth building. The interest is tax-free, and investments qualify for deductions under Section 80C. You can invest between ₹500 and ₹1.5 lakh per year. Ideal for risk-averse investors, PPF ensures financial security while offering compounding benefits.',
+                        'Growing the same crop repeatedly in the same field depletes soil nutrients and increases pest problems. Crop rotation—alternating crops in different seasons—helps maintain soil fertility and reduces the risk of diseases.\nFor example, farmers can follow this rotation cycle:\n🌾 Year 1: Grow nitrogen-fixing legumes like pulses or soybeans\n🌽 Year 2: Plant a cereal crop like wheat or maize\n🥔 Year 3: Grow root crops like potatoes or onions\nThis method prevents nutrient exhaustion, disrupts pest life cycles, and improves overall soil health, leading to better yields with lower input costs.',
                         style: TextStyle(fontSize: 20),
                       )
                     ],
